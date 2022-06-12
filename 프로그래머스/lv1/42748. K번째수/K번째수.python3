@@ -1,0 +1,7 @@
+def solution(array, phone_book):
+    answer = []
+    for i in range(len(phone_book)):
+        phone = array[phone_book[i][0]-1:phone_book[i][1]]
+        phone.sort()
+        answer.append(phone[phone_book[i][2]-1])
+    return answer
